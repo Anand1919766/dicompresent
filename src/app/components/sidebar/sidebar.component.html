@@ -1,0 +1,74 @@
+<div class="sidebar-wrapper">
+  <ul class="nav">
+    <li
+    >
+
+      <table class="table table-striped tablefont">
+        
+        <thead>
+          <th>Patient List</th>
+        </thead>
+        <!-- <li *ngFor="let d of logic.patient" (click)="displaydetails(d.name)"[ngClass] = "{'highlight':d.name == this.logic.patientname}" > -->
+        <tbody *ngFor="let d of logic.patient" (click)="displaydetails(d.name)"[ngClass] = "{'highlight':d.name == this.logic.patientname}">
+          <!-- (click)="displaySelectedPatientDetail()" -->
+          
+
+        <tr>
+        <td>{{d.name}}</td>
+        
+        </tr>
+        
+      
+      
+        </tbody>
+      
+        </table>
+
+
+
+
+
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,104 @@
+<nav class=" navbar navbar-expand-lg navbar-absolute navbar-transparent">
+  
+  <div class=" container-fluid" style="height: 200px;">
+    <div class="navbar-wrapper">
+     <div class=" navbar-toggle d-inline">
+        <button class=" navbar-toggler" type="button" (click)="sidebarToggle()">
+          <span class=" navbar-toggler-bar bar1"> </span>
+          <span class=" navbar-toggler-bar bar2"> </span>
+          <span class=" navbar-toggler-bar bar3"> </span>
+        </button>
+      </div>
+      <!-- <div style="margin-left: 25%; margin-top: 5%;">
+     
+        <h1 class="header">
+          <B> Dicom Viewer</B>
+        </h1>
+      </div> -->
+      <a class=" navbar-brand" style=" font-size: 30px; font-weight: bolder; color: #DEC19B;margin-left: 40%;"> DICOM VIEWER </a>
+    </div>
+      <div class=" navbar-collapse" [ngbCollapse]="isCollapsed" id="navigation" style="padding-bottom: 70px; margin-left: 20%;">
+        <button aria-label="Toggle navigation" class=" navbar-toggler" (click)="collapse()"
+        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample" id="navigation" type="button">
+        <span class=" navbar-toggler-bar navbar-kebab"> </span>
+        <span class=" navbar-toggler-bar navbar-kebab"> </span>
+        <span class=" navbar-toggler-bar navbar-kebab"> </span>
+      </button>
+
+      
+    
+
+    
+    
+    <form id="accesspanel" action="">
+       <h1 id="litheader"><div class=" photo">
+        <img alt="Profile Photo" src="assets/img/admin.jpg" />
+      </div>  Admin  </h1>
+      <div class="inset" style="margin-top: -10px;">
+        
+        <p>
+          <button type="button" style="color:rgb(250, 87, 95); background-color:rgb(15, 15, 15) ;">Login Time :{{todayDate | date:'shortTime'}} </button>
+        </p>
+       
+        <p >
+          <a class=" nav-item" href="javascript:void(0)" style="color:rgb(250, 87, 95);  width: 50px;" ngbDropdownItem
+                routerLink="/password">
+                Settings
+              </a>
+        </p>
+        
+        <p style="margin-top: 10px;">
+          <a class=" nav-item" href="javascript:void(0)" style="color: rgb(245, 102, 102) ; width: 50px;" ngbDropdownItem
+          routerLink="/login">
+          Log out
+        </a>
+        </p>
+      </div> 
+      
+     </form>
+  
+  
+ 
+    
+    <ul style="margin-bottom: auto;">
+</ul>
+    
+    <!-- <div style="margin-left: 25%; margin-top: 5%;">
+     
+      <h1 class="header">
+        <B> Dicom Viewer</B>
+      </h1>
+    </div> -->
+    <form id="accesspanel" action="" style="margin-left: 75%; width: 300px; height:200px; margin-top: 15px; " > 
+      
+     
+      <div class="inset" style="margin-top: -10px; ">
+        
+       
+        <p>
+          <button type="button" style="color:rgb(250, 87, 95); background-color:rgb(15, 15, 15) ;">File:{{count}} </button>
+        </p>
+       
+        <p  class="file">
+         
+
+                <input class="button1" type="file" (change)="onselectedfile($event)" style="color:rgb(250, 87, 95);"><br><br>
+                <button mat-raised-button color="primary" class="button" (click)="displayfile()" style="background-color:rgb(250, 87, 95);">Submit</button>
+
+             
+        </p>
+        
+        <p style="margin-top: 10px;">
+          <input class="form-control" placeholder="Search" id="mySearch" type="text" value=""
+          (focus)="focus = true" (blur)="focus = false" >
+        <button type="button" (click)="displaysearch()" style="background-color:rgb(250, 87, 95);">submit</button>
+          
+        </p>
+        
+      </div>
+      
+    </form>
+    </div>
+  </div>
+</nav>
+
